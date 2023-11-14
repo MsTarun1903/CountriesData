@@ -1,0 +1,55 @@
+body{
+    text-align: center;
+}
+
+h1{
+font-family: 'Montserrat', sans-serif;
+color: orange;
+}
+h2{
+    font-weight: 400;
+    font-size:x-large;
+}
+
+h3{
+    font-weight: 500;
+    font-size:larger;
+}
+
+
+#Population{
+   background-color:  orange;
+   margin-right: 50px;
+   margin-left: 40px;
+   border:none;
+   height: 30px;
+   width: 100px;
+   border-radius:4px;
+}
+
+#languages{
+    background-color: orange;
+    margin-right: 50px;
+    border: none;
+    height: 30px;
+    width: 100px;
+    border-radius: 4px;
+}
+
+.country-data{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .language-data {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .left {
+    text-align: left;
+  }
+  
+  .right {
+    text-align: right;
+  }
