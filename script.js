@@ -15,6 +15,9 @@ populationButton.addEventListener("click", e => {
   let ctx = document.getElementById('myChart');
   let labels = countriesData.map(data=>data.country);
   let data = countriesData.map(data=> data.population);
+  if (myChart){
+    chart.destroy();
+  }
   let myChart = new Chart(ctx,{
     type: "bar",
     data:{
@@ -50,6 +53,9 @@ languageButton.addEventListener("click", e => {
   let ctx = document.getElementById('myChart');
   let labels = languagesData.map(data=>data.language);
   let data = languagesData.map(data=>data.nativeSpeakers);
+  if(myChart){
+    myChart.destroy();
+  }
   let myChart = new Chart(ctx,{
     type: "bar",
     data:{
