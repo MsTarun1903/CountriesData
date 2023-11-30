@@ -16,9 +16,9 @@ populationButton.addEventListener("click", e => {
   let labels = countriesData.map(data=>data.country);
   let data = countriesData.map(data=> data.population);
   if (myChart){
-    chart.destroy();
+    myChart.destroy();
   }
-  let myChart = new Chart(ctx,{
+   myChart = new Chart(ctx,{
     type: "bar",
     data:{
       labels: labels,
@@ -56,7 +56,7 @@ languageButton.addEventListener("click", e => {
   if(myChart){
     myChart.destroy();
   }
-  let myChart = new Chart(ctx,{
+   myChart = new Chart(ctx,{
     type: "bar",
     data:{
       labels: labels,
