@@ -1,7 +1,7 @@
+let myChart;
 const populationButton = document.querySelector("#Population")
 const languageButton = document.querySelector("#languages");
 const output = document.querySelector("#buttonText")
-
 populationButton.addEventListener("click", e => {
   output.innerHTML = ""; 
   output.innerHTML += "10 most populated countries in the world";
@@ -15,10 +15,13 @@ populationButton.addEventListener("click", e => {
   let ctx = document.getElementById('myChart');
   let labels = countriesData.map(data=>data.country);
   let data = countriesData.map(data=> data.population);
-  if (myChart){
+  
+  // Destroy the previous chart if it exists
+  if (myChart) {
     myChart.destroy();
   }
-   myChart = new Chart(ctx,{
+
+  myChart = new Chart(ctx,{
     type: "bar",
     data:{
       labels: labels,
@@ -106,12 +109,3 @@ const languagesData = [
   { language: "Lahnda/Punjabi", nativeSpeakers: 100000000 }
 ];
 
-
-populationButton.addEventListener("click",e=>{
-
-});
-
-
-languageButton.addEventListener("click",e=>{
-
-})
